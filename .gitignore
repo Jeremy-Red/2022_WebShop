@@ -1,2 +1,3 @@
 www/vendor
+!www/vendor/wfm
 www/composer.lock

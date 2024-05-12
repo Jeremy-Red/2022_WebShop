@@ -8,4 +8,6 @@ require_once dirname(__DIR__) . '/config/init.php';
 
 new App();
 
-echo '';
+// throw new Exception('Test exception');
+// echo $test;
+echo 'Hello';

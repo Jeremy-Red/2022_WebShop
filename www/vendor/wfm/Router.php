@@ -33,11 +33,10 @@ class Router
                 if (method_exists($controllerObject, $action)) {
                     $controllerObject->$action();
                 } else {
-                    throw new Exception("Method \"{$controller}->{$action}\" is not exist", 404);
+                    throw new Exception("Method \"{$controller}::{$action}\" is not exist", 404);
                 }
             } else {
                 throw new Exception("Controller \"{$controller}\" is not exist", 404);
-                // debug($_SERVER);
             }
         } else {
             throw new Exception('Page is not found', 404);

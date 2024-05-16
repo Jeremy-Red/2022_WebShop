@@ -5,6 +5,6 @@ class MainController
 {
     public function indexAction()
     {
-        echo '<h1>Admin area</h1>';
+        echo '<h1>Admin area web</h1>';
     }
 }

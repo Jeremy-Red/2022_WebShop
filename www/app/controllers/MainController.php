@@ -5,9 +5,10 @@ use wfm\Controller;
 
 class MainController extends Controller
 {
+    // public false|string $layout = 'test2';
     public function indexAction()
     {
-        // debug($this->model);
-        echo __METHOD__;
+        $this->layout = 'default';
+
     }
 }

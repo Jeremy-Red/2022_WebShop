@@ -39,7 +39,9 @@ class Router
                 . 'Controller';
             $action = self::lowerCamelCase(self::$route['action']) . 'Action';
             if (class_exists($controller)) {
+                /** @var Controller $controllerObject */
                 $controllerObject = new $controller(self::$route);
+                $controllerObject->getModel();
                 $action = self::lowerCamelCase(self::$route['action']) . 'Action';
                 if (method_exists($controllerObject, $action)) {
                     $controllerObject->$action();

@@ -1,10 +1,13 @@
 <?php
 namespace app\controllers;
 
-class MainController
+use wfm\Controller;
+
+class MainController extends Controller
 {
     public function indexAction()
     {
+        // debug($this->model);
         echo __METHOD__;
     }
 }

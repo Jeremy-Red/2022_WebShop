@@ -3,20 +3,10 @@ use wfm\View;
 
 /** @var View $this */
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<?php $this->getPart('parts/header'); ?>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-    <?= $this->getMeta(); ?>
-</head>
+<p>This is default layout ishop.php</p>
 
-<body>
-    <p>This is default layout ishop.php</p>
-    <?= $this->content; ?>
+<?= $this->content; ?>
 
-</body>
-
-</html>
+<?php $this->getPart('parts/footer'); ?>

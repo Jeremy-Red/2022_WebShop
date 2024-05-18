@@ -5,3 +5,8 @@ function debug($data, $die = false)
     if ($die)
         die;
 }
+
+function h($str)
+{
+    return htmlspecialchars($str, double_encode: false);
+}

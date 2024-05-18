@@ -35,7 +35,7 @@ abstract class Controller
         $this->meta = [
             'title' => $title,
             'description' => $description,
-            'keywords' => $description,
+            'keywords' => $keywords,
         ];
     }
 }

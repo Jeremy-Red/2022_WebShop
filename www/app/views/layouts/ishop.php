@@ -10,7 +10,7 @@ use wfm\View;
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
-    <title>IShop</title>
+    <?= $this->getMeta(); ?>
 </head>
 
 <body>

@@ -35,7 +35,8 @@ P::start();
 
 <body>
     <h2><?= P::$title ?></h2>
-    <p id="info"></p>
+    <div>Target update time: <?= TARGET_TIME ?></div>
+    <div id="info"></div>
     <hr>
     <p>Looked for "<strong><?= KEYS ?></strong>":</p>
     <ul><?= P::$keysList ?></ul>

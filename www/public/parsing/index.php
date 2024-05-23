@@ -37,6 +37,8 @@ P::start();
     <h2><?= P::$title ?></h2>
     <div>Target update time: <?= TARGET_TIME ?></div>
     <div id="info"></div>
+    <button type="button"
+            id="mute">Mute audio</button>
     <hr>
     <p>Looked for "<strong><?= KEYS ?></strong>":</p>
     <ul><?= P::$keysList ?></ul>
@@ -51,19 +53,24 @@ P::start();
             const differenceTime = targetTime - Date.now();
             const isExpired = differenceTime <= 0;
             let nextUpdate = isExpired ? 30000 : differenceTime;
+            let audio = null;
 
             if (!isUpdated) {
                 if (isExpired)
-                    play('./assets/no-update.wav', false);
+                    play('./assets/no-update.wav', true);
                 updateTime();
             } else {
                 setInfo();
                 play('./assets/update.wav', true);
             }
+            mute.onclick = function () {
+                if (audio)
+                    audio.muted = true;
+            };
             function play(path, loop) {
-                $audio = new Audio(path);
-                $audio.play();
-                $audio.loop = loop;
+                audio = new Audio(path);
+                audio.play();
+                audio.loop = loop;
             }
             function updateTime() {
                 setInfo();

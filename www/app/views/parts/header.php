@@ -1,5 +1,6 @@
 <?php
 use wfm\View;
+use wfm\App;
 
 /** @var View $this */
 ?>
@@ -113,7 +114,7 @@ use wfm\View;
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid p-0">
                         <a class="navbar-brand"
-                           href="index.html">Shop Brand</a>
+                           href="/"><?= App::$app->getProperty('site_name') ?></a>
                         <button class="navbar-toggler"
                                 type="button"
                                 data-bs-toggle="collapse"

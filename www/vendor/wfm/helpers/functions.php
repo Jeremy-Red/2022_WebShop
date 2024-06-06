@@ -1,4 +1,6 @@
 <?php
+use wfm\App;
+
 function debug($data, $die = false)
 {
     echo '<pre>' . print_r($data, true) . '</pre>';
@@ -20,4 +22,12 @@ function redirect($http = false)
     }
     header("location: {$redirect}");
     die;
+}
+
+function base_url()
+{
+    $lang = App::$app->getProperty('lang');
+    $url = PATH . '/' .
+        ($lang ? $lang . '/' : '');
+    return $url;
 }
